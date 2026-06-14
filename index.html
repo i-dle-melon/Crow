@@ -130,7 +130,7 @@
     background: rgba(30, 30, 30, 0.95); /* 深灰色背景 */
     border: 2px solid #00cd3c; /* 經典亮綠色邊框 */
     border-radius: 12px;
-    padding: 10px;/* 將原本的 20px 上下內距縮減為 10px */
+    padding: 0px;/* 將原本的 20px 上下內距縮減為 0px */
     margin: 10px 0 20px 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     animation: pulse 2s infinite;
@@ -239,7 +239,7 @@
 
     <div class="chart-card">
         <div class="chart-header">
-            <div class="chart-title">收聽量動態趨勢曲線</div>
+            <div class="chart-title">收聽量動態趨勢曲線 <span style="color: #888888;font-size: 12px;">--- 點曲線查看每日音源</span></div>
             <div class="btn-group">
                 <button class="btn" onclick="updatePeriod(7)">7天</button>
                 <button class="btn" onclick="updatePeriod(14)">14天</button>
@@ -648,3 +648,6 @@ window.addEventListener('resize', checkOrientation);
 </script>
 </body>
 </html>
+<footer class="site-footer">
+    <p>© 2026 <a href="https://line.me/ti/g2/lquJYJWOJudOLkUti7prCFNeSbvKF2vn2AdEYQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">i-dle西瓜攤</a>GigiBoss. All rights reserved. Designed & Maintained by GigiBoss</p>
+</footer>
