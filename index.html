@@ -759,6 +759,25 @@ function checkOrientation() {
 window.addEventListener('DOMContentLoaded', checkOrientation);
 // 手機轉向或視窗大小改變時，即時再次檢查
 window.addEventListener('resize', checkOrientation);
+</script>
+
+<div style="text-align: center; color: #888888; font-size: 14px; margin-top: 20px;">
+    <p>本站瀏覽總次數：<span id="view-count" style="color: #00e676; font-weight: bold;">載入中...</span> 次</p>
+</div>
+
+<script>
+  // 替換成你部署後的 Cloudflare Workers 網址
+  const workerUrl = 'https://wispy-wind-f5df.1fangwh.workers.dev/'; 
+
+  fetch(workerUrl)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('view-count').innerText = data.views;
+    })
+    .catch(error => {
+      console.error('計數器載入失敗:', error);
+      document.getElementById('view-count').innerText = '0';
+    });
 
 </script>
 </body>
